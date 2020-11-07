@@ -1,0 +1,137 @@
+.header {
+    width: 100%;
+}
+
+div.filter {
+    background: #ffffff;
+    padding: 0 20px;
+    height: 100%;
+    float: left;
+    margin-top: 10px;
+    border-radius: 5px;
+}
+div.secondFilter{
+    background: #ffffff;
+    padding: 0 1px;
+    height: 100%;
+    float: left;
+    margin-top: -10px;
+    border-radius: 5px;
+}
+
+.year {
+    width: 50%;
+    float: left;
+    text-align: center;
+    cursor: pointer;
+    background-color: #ffffff;
+}
+
+.year p {
+    background-color: #a5f7b3;
+    margin: 10px 10px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.image-responsive {
+    width: 100%;
+    background-color: #f1f1f1;
+}
+
+.card {
+    padding: 10px;
+    background-color: #ffffff;
+    border-radius: 5px;
+}
+
+p.title {
+    color: blue;
+    font-weight: 600;
+}
+
+p.subtitle {
+    color: black;
+    font-weight: 600;
+}
+
+.bullets {
+    list-style-type: disc;
+}
+
+
+@media only screen and (max-width: 700px) {
+   
+    
+    .sidebar {
+        height: 100%;
+        width: 100%;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        padding: 0px;
+    }
+    .content {
+        width: 100%;
+    }
+    .col {
+        width: 100%;
+        float: left;
+        padding: 0px 5px 5px 5px;
+    }
+}
+
+
+@media (min-width:700px) and (max-width:1024px){
+   
+    .content {
+        width: 69%;
+        height: 100%;
+        float: right;
+    }
+    .sidebar {
+        height: 100%;
+        width: 29%;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        padding: 10px;
+    }
+    .col {
+        width: 47%;
+        float: left;
+        padding: 0px 5px 5px 5px;
+    }
+}
+
+
+@media only screen and (min-width:1024px) {
+   
+    .content {
+        width: 80%;
+        height: 100%;
+        float: right;
+    }
+    .sidebar {
+        height: 100%;
+        width: 19%;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        padding: 10px;
+    }
+    .col {
+        width: 23.666666%;
+        float: left;
+        padding: 0px 5px 5px 5px;
+    }
+}
+
+.selectable:focus {
+    background-color: lightgray;
+}
+.launch:focus {
+    background-color: lightgray;
+}
+.selectable:active { background-color: purple; }  
+

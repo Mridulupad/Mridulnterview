@@ -1,0 +1,57 @@
+<div class="header">
+    <h3>SpaceX Launch Programs</h3>
+</div>
+<div class="panel">
+    <div class="sidebar">
+
+        <div class="filter">
+            <h4>Filter</h4>
+            <h5 class="underlined" style="text-align: center;">Launch Year</h5>
+            <div  class="years" href="#">
+                <!-- <button type="submit" class="year" id="1"><p>2007</p></button> -->
+                <div *ngFor="let i of filterArray;let j=index" class="year" >
+                 <p class="selectable" [ngStyle]="{'background-color':i.selected ? 'grey' :' #a5f7b3' }" tabindex="0" (click)="getYear(i.year,j)">{{i.year}}</p>  
+                 
+                </div>
+                <h5 class="underlined" style="text-align: center;">Successful Land</h5>
+                <div class="year">
+                    <p class="selectable" [ngStyle]="{'background-color':landTrue? 'grey' :' #a5f7b3' }" tabindex="0" (click)="landValue('true')">True</p>
+                </div>
+                <div class="year">
+                    <p class="selectable" [ngStyle]="{'background-color':landFlagFalse? 'grey' :' #a5f7b3' }" tabindex="0" (click)="landValue('false')">False</p>
+                </div>
+                <h5 class="underlined" style="text-align: center;">Successful Launch</h5>
+                <div class="year">
+                    <p class="launch"[ngStyle]="{'background-color':launchFlagTrue? 'grey' :' #a5f7b3' }"  tabindex="0" (click)="launchValue('true')">True</p>
+                </div>
+                <div class="year">
+                    <p class="launch"  [ngStyle]="{'background-color':launchFlagFalse? 'grey' :' #a5f7b3' }" tabindex="0" (click)="launchValue('false')">False</p>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+    <div class="content">
+
+        <div *ngFor="let i of data" class="col">
+            <div class="card">
+                <div class="image">
+                    <img class="image-responsive" src="{{i.links.mission_patch_small}}" alt="">
+                </div>
+                <div class="card-content">
+                    <p class="title">{{i.mission_name}}</p>
+                    <p class="subtitle">Mission Id :{{i.mission_id[0]}} </p>
+                    <ul class="bullets">
+                        <li>1</li>
+                        <li>1</li>
+                    </ul>
+                    <p class="subtitle">Launch Year : <span>{{i.launch_year}}</span></p>
+                    <p class="subtitle">Successful Launch : <span>{{i.launch_success}}</span></p>
+                    <p class="subtitle">Successful Landing : <span>{{i.land_success}}</span></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</div>
